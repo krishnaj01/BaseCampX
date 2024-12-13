@@ -50,6 +50,7 @@ const sample = array => array[Math.floor(Math.random() * array.length)];
 const seedDB = async () => {
 
     // ---> remember uncommenting the below line will remove all campgrounds from the database laong with all the reviews --> but it does not removes the users
+    // but does not delete images from the cloudinary account
     // await Campground.deleteMany({});
 
     const pexelImages = await client.photos.search({ query, per_page: 6 }).then(response => response.photos);
