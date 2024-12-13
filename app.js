@@ -17,7 +17,7 @@ const helmet = require('helmet');
 const User = require('./models/user');
 const MongoStore = require('connect-mongo');
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const campgroundRoutes = require('./routes/campgroundRoutes');
 const reviewRoutes = require('./routes/reviewRoutes');
@@ -26,8 +26,8 @@ const userRoutes = require('./routes/userRoutes');
 //MONGOOSE CONNECTION
 //Handling Errors during initial connection
 
-// const dbURL = process.env.DB_URL;
-const dbURL = 'mongodb://127.0.0.1:27017/yelp-camp'
+const dbURL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/yelp-camp';
+
 mongoose.connect(dbURL)
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!");
@@ -58,11 +58,13 @@ app.use(mongoSanitize({
       replaceWith: '_',
 }));
 
+const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
+
 const store = MongoStore.create({
     mongoUrl: dbURL,
     touchAfter: 24 * 60 * 60, //time in seconds
     crypto: {
-        secret: 'thisshouldbeabettersecret!'
+        secret
     }
 });
 
@@ -80,7 +82,7 @@ store.on("error", function(e){
 const sessionConfig = {
     store,
     name: 'session',
-    secret: 'thisshouldbeabettersecret',
+    secret,
     resave: false, //to remove deprecation warnings
     saveUninitialized: true, //to remove deprecation warnings
     cookie: {
