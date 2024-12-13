@@ -78,6 +78,20 @@ CampgroundSchema.post("findOneAndDelete", async function (doc) {
     }
 });
 
+CampgroundSchema.pre("deleteMany", async function (next) {
+    const queryConditions = this.getQuery();
+    const campgrounds = await this.model.find(queryConditions);
+
+    for (let campground of campgrounds) {
+        await Review.deleteMany({
+            _id: {
+                $in: campground.reviews
+            }
+        });
+    }
+    next();
+});
+
 //important to make it a model
 const Campground = mongoose.model('Campground', CampgroundSchema); //by the above I mean this line
 module.exports = Campground;

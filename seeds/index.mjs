@@ -28,7 +28,8 @@ const query = 'camp';
 
 //MONGOOSE CONNECTION
 //Handling Errors during initial connection
-const connection = mongoose.connect('mongodb://127.0.0.1:27017/yelp-camp')
+const dbURL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/yelp-camp';
+const connection = mongoose.connect(dbURL)
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!");
     })
@@ -47,14 +48,17 @@ db.once("open", () => {
 const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
-    await Campground.deleteMany({});
+
+    // ---> remember uncommenting the below line will remove all campgrounds from the database laong with all the reviews --> but it does not removes the users
+    // await Campground.deleteMany({});
+
     const pexelImages = await client.photos.search({ query, per_page: 6 }).then(response => response.photos);
     // console.log(pexelImages.length); ---> max 80
     for (let i = 0; i < 500; i++) {
         const random1030 = Math.floor(Math.random()*1030);
         const price = Math.floor(Math.random() * 200) + 1;
         const camp = new Campground({
-            author: '674427d12c168d56fc165803', //setting initial author that exists
+            author: '675bda6099560f8a7ff6030b', //setting initial author that exists
             location: `${cities[random1030].city}, ${cities[random1030].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             // image: images[i].src.medium,
@@ -66,16 +70,16 @@ const seedDB = async () => {
             },
             images: [
                 {
-                  url: pexelImages[1].src.medium,
-                  filename: pexelImages[1].id
+                  url: pexelImages[5].src.medium,
+                  filename: pexelImages[5].id
                 },
                 {
                     url: pexelImages[4].src.medium,
                     filename: pexelImages[4].id
                 },
                 {
-                    url: pexelImages[5].src.medium,
-                    filename: pexelImages[5].id
+                    url: pexelImages[1].src.medium,
+                    filename: pexelImages[1].id
                 }
             ]
         })
