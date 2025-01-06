@@ -87,7 +87,7 @@ const sessionConfig = {
     saveUninitialized: true, //to remove deprecation warnings
     cookie: {
         httpOnly: true,
-        // secure: true, //the cookie should only be accessible or work over HTTPS ---> localhost is not HTTPS, therfore it is not secure--> if it set true, then the cookies can only be configured over HTTPS
+        secure: process.env.NODE_ENV === 'production', //the cookie should only be accessible or work over HTTPS ---> localhost is not HTTPS, therfore it is not secure--> if it set true, then the cookies can only be configured over HTTPS
         expires: Date.now() + (1000*60*60*24*7), //Date.now() is in milliseconds
         maxAge: 1000*60*60*24*7
     }
