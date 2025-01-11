@@ -1,5 +1,7 @@
 # BaseCampX Website
-Camping Website! Add Campgrounds, review others campgrounds and much more!
+BasecampX is a comprehensive platform designed to streamline outdoor adventure planning, offering a seamless experience for enthusiasts to discover and share their camping and trekking experiences.
+
+Add Campgrounds, review others campgrounds and much more!
 
 ## Live Website Link
 https://basecampx.onrender.com/
