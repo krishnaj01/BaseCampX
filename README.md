@@ -42,7 +42,7 @@ npm install
 3. Set up environment variables:
 *(Create a .env file in the root directory and add the following)*
 
-```bash
+```
 DB_URL=<your-mongodb-connection-string>
 
 CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
