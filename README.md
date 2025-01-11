@@ -25,7 +25,7 @@ https://basecampx.onrender.com/
 - **Full CRUD Implementation:** Complete CRUD functionality for users to create, read, update, and delete their camps. Reviews can be created, read and deleted directly through the platform.
 
 ## Tech Stack
-- **Frontend:** Embedded JavaScript (EJS Template)
+- **Frontend:** Embedded JavaScript (EJS Template), HTML5, CSS3, Bootstrap CSS
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB Atlas
 - **APIs:** RESTful API design, Cloudinary, Mapbox
