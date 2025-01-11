@@ -16,6 +16,12 @@ https://basecampx.onrender.com/
 
 - **Interactive Map:** Discover nearby destinations and plan routes with an intuitive map interface.
 
+- **Authentication:** Secure user login and registration with *Passport.js* and *passport-local-mongoose* to manage authentication and user sessions.
+
+- **Campground Reviews:** Users can leave reviews and ratings on campgrounds, helping others make informed decisions based on feedback from the community.
+
+- **Full CRUD Implementation:** Complete CRUD functionality for users to create, read, update, and delete their camps. Reviews can be created, read and deleted directly through the platform.
+
 ## Tech Stack
 - **Frontend:** Embedded JavaScript (EJS Template)
 - **Backend:** Node.js, Express.js
@@ -25,16 +31,18 @@ https://basecampx.onrender.com/
 
 ##  Setup and Installation
 1. Clone the repository & enter the BaseCampX directory.
+```bash
+git clone https://github.com/krishnaj01/BaseCampX.git
+cd BaseCampX
+```
 2. Install dependencies:
 ```bash
 npm install
 ```
 3. Set up environment variables:
-```bash
-hello
-```
 *(Create a .env file in the root directory and add the following)*
-```
+
+```bash
 DB_URL=<your-mongodb-connection-string>
 
 CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>
