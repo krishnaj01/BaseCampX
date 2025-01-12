@@ -16,7 +16,7 @@ https://basecampx.onrender.com/
 ## Features
 - **Adventure Listings:** Explore a wide range of treks and camping destinations with detailed descriptions, images, and user reviews.
 
-- **Interactive Map:** Discover nearby destinations and plan routes with an intuitive map interface.
+- **Interactive Maps:** Discover nearby destinations and plan routes with an intuitive map interface.
 
 - **Authentication:** Secure user login and registration with *Passport.js* and *passport-local-mongoose* to manage authentication and user sessions.
 
