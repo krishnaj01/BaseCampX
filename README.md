@@ -3,7 +3,7 @@ BasecampX is a comprehensive platform designed to streamline outdoor adventure p
 
 Add Campgrounds, review others campgrounds and much more! *(Inspired by Colt Steele's Yelpcamp)*
 
-## Live Website Link
+## 🚀 Live Application
 https://basecampx.onrender.com/
 
 <div style="display: flex; align-items: center; justify-content: space-evenly; flex-wrap: wrap; gap: 1rem">
@@ -13,7 +13,7 @@ https://basecampx.onrender.com/
     <img src="./assets/screenshots/register-page.png" alt="BasecampX Register Page" style="width: 40%; height: auto;">
 </div>
 
-## Features
+## 🎯 Features
 - **Adventure Listings:** Explore a wide range of treks and camping destinations with detailed descriptions, images, and user reviews.
 
 - **Interactive Maps:** Discover nearby destinations and plan routes with an intuitive map interface.
@@ -24,14 +24,14 @@ https://basecampx.onrender.com/
 
 - **Full CRUD Implementation:** Complete CRUD functionality for users to create, read, update, and delete their camps. Reviews can be created, read and deleted directly through the platform.
 
-## Tech Stack
+## 🛠️ Tech Stack
 - **Frontend:** Embedded JavaScript (EJS Template), HTML5, CSS3, Bootstrap CSS
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB Atlas
 - **APIs:** RESTful API design, Cloudinary, Mapbox
 - **Hosting:** Render
 
-##  Setup and Installation
+## ⚙️ Setup and Installation
 1. Clone the repository & enter the BaseCampX directory.
 ```bash
 git clone https://github.com/krishnaj01/BaseCampX.git
@@ -64,12 +64,12 @@ node app.js
 ```
 5. Access the website locally at http://localhost:8080
 
-## Contribution Guidelines
+## 📝 Contribution Guidelines
 To contribute:
 1. Fork the repository.
 2. Create a new branch for your feature/bug fix.
 3. Commit your changes with meaningful commit messages.
 4. Push to your fork and submit a pull request.
 
-## Contact
+## 📬 Contact
 For any issues or suggestions, contact me at krishnaj@iitbhilai.ac.in
