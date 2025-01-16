@@ -1,7 +1,7 @@
 # BaseCampX Website
 BasecampX is a comprehensive platform designed to streamline outdoor adventure planning, offering a seamless experience for enthusiasts to discover and share their camping and trekking experiences.
 
-Add Campgrounds, review others campgrounds and much more! *(Inspired by Colt Steele's Yelpcamp)*
+Add Campgrounds, review others campgrounds and much more!
 
 ## 🚀 Live Application
 https://basecampx.onrender.com/
